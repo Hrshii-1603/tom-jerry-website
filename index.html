@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom & Jerry – The Never Ending Chase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Reusable icons ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-cheese" viewBox="0 0 64 48">
+      <path d="M4 22 L46 6 L60 18 L60 42 L4 42 Z" fill="#F7C531" stroke="#2a2a30" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M4 22 L60 18" stroke="#2a2a30" stroke-width="2.5" fill="none"/>
+      <circle cx="18" cy="32" r="4" fill="#DFA21C"/><circle cx="36" cy="30" r="3" fill="#DFA21C"/>
+      <circle cx="49" cy="35" r="3.5" fill="#DFA21C"/><circle cx="31" cy="15" r="2.3" fill="#DFA21C"/>
+    </symbol>
+    <symbol id="i-paw" viewBox="0 0 32 32">
+      <ellipse cx="16" cy="21" rx="7" ry="6"/><circle cx="7" cy="13" r="3"/><circle cx="12.5" cy="7.5" r="3"/>
+      <circle cx="19.5" cy="7.5" r="3"/><circle cx="25" cy="13" r="3"/>
+    </symbol>
+    <symbol id="i-trap" viewBox="0 0 64 48">
+      <rect x="4" y="26" width="56" height="14" rx="3" fill="#C98B4A" stroke="#2a2a30" stroke-width="2.5"/>
+      <path d="M12 26 V12 H40 V26" fill="none" stroke="#2a2a30" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="46" cy="26" r="4" fill="#9aa3b2" stroke="#2a2a30" stroke-width="2"/>
+      <path d="M50 22 l6 -6 l3 3 l-6 6 z" fill="#F7C531" stroke="#2a2a30" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-pan" viewBox="0 0 64 48">
+      <ellipse cx="26" cy="26" rx="20" ry="16" fill="#3a3a42" stroke="#2a2a30" stroke-width="2.5"/>
+      <ellipse cx="26" cy="24" rx="14" ry="10" fill="#55555f"/>
+      <rect x="44" y="22" width="18" height="7" rx="3" fill="#C98B4A" stroke="#2a2a30" stroke-width="2"/>
+      <path d="M18 10 q2 -6 0 -9 M26 9 q2 -6 0 -8 M34 10 q2 -6 0 -9" stroke="#9aa3b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-trophy" viewBox="0 0 64 48">
+      <path d="M20 4 H44 V18 a12 12 0 0 1 -24 0 Z" fill="#F7C531" stroke="#2a2a30" stroke-width="2.5"/>
+      <path d="M20 8 H12 a8 8 0 0 0 8 12 M44 8 H52 a8 8 0 0 1 -8 12" fill="none" stroke="#2a2a30" stroke-width="2.5"/>
+      <rect x="29" y="30" width="6" height="8" fill="#DFA21C"/><rect x="20" y="38" width="24" height="7" rx="2" fill="#C98B4A" stroke="#2a2a30" stroke-width="2.5"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 32 32">
+      <path d="M16 28 C6 20 2 15 2 10 a7 7 0 0 1 14 -2 a7 7 0 0 1 14 2 c0 5 -4 10 -14 18z" fill="#F0736A" stroke="#2a2a30" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 32 32">
+      <path d="M18 2 L6 18 H15 L12 30 L26 12 H17 Z" fill="#F0736A" stroke="#2a2a30" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-bulb" viewBox="0 0 32 32">
+      <path d="M16 3a9 9 0 0 0-5 16.5V23h10v-3.5A9 9 0 0 0 16 3z" fill="#F7C531" stroke="#2a2a30" stroke-width="2"/>
+      <rect x="11.5" y="24" width="9" height="4" rx="1.5" fill="#9aa3b2" stroke="#2a2a30" stroke-width="1.6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ===== Header ===== -->
+<header class="nav">
+  <a href="#top" class="logo">Tom<span>&amp;</span>Jerry</a>
+  <nav class="links" id="navLinks">
+    <a href="#story">Story</a>
+    <a href="#legends">Legends</a>
+    <a href="#history">History</a>
+    <a href="#adventures">Adventures</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+  <div class="cheese-count" title="Find the hidden cheese pieces on this page!">
+    <svg><use href="#i-cheese"/></svg><span id="cheeseCount">0</span>/5
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 01. HERO -->
+<section class="hero">
+  <div class="hero-text reveal">
+    <p class="eyebrow">The Never Ending Chase</p>
+    <h1>One Cat. One Mouse. A Million <em>Mischiefs!</em></h1>
+    <p class="lead">Welcome to a world where peace never lasts, cheese never stays safe, and every little moment turns into a big adventure!</p>
+    <p>Meet <b>Tom</b>, the cat who never gives up, and <b>Jerry</b>, the mouse who never gets caught. Together, they turn an ordinary day into an extraordinary disaster.</p>
+    <div class="btns">
+      <a href="#story" class="btn btn-yellow">Let the chase begin!</a>
+      <a href="#quiz" class="btn btn-line">Take the quiz</a>
+    </div>
+    <p class="hint"><svg><use href="#i-cheese"/></svg> Psst… 5 pieces of cheese are hidden on this page. Can you find them all?</p>
+  </div>
+
+  <div class="hero-art reveal">
+    <div class="orbit" aria-hidden="true"></div>
+    <div class="sun" aria-hidden="true"></div>
+    <div class="floor" aria-hidden="true"></div>
+    <!-- Main hero image: images/duo.png (transparent PNG) -->
+    <div class="slot hero-duo" data-label="duo.png">
+      <img src="images/duo.png" alt="Tom and Jerry, best enemies forever" onerror="this.parentNode.classList.add('empty');this.remove()">
+    </div>
+    <svg class="h-cheese" aria-hidden="true"><use href="#i-cheese"/></svg>
+    <div class="badge" aria-hidden="true"><span>Since</span><b>1940</b></div>
+    <div class="h-paws" aria-hidden="true">
+      <svg><use href="#i-paw"/></svg><svg><use href="#i-paw"/></svg><svg><use href="#i-paw"/></svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mqTrack"></div>
+</div>
+
+<!-- 02. INTRODUCTION -->
+<section class="band intro wavy" id="story">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="eyebrow">How it all goes wrong</p>
+      <h2>A Rivalry <em>Like No Other!</em></h2>
+      <p class="lead">What happens when a clever little mouse shares a house with a not-so-clever cat?</p>
+      <p>Well, you get endless running, hilarious tricks, unexpected disasters and laughter that never gets old!</p>
+      <p>Tom wants peace, Jerry wants cheese, and neither is ready to surrender. But here's the twist: no matter how much they fight, they just can't stay apart.</p>
+      <p class="sticker">Because every great friendship needs a little chaos!</p>
+    </div>
+    <div class="tug reveal">
+      <div class="tug-side tom-side"><span>Tom wants</span><strong>Peace</strong></div>
+      <div class="tug-vs">vs</div>
+      <div class="tug-side jerry-side"><span>Jerry wants</span><strong>Cheese</strong></div>
+      <div class="tug-rope"><i id="tugKnot"></i></div>
+      <p class="tug-note">It's a tie… for now!</p>
+    </div>
+  </div>
+  <button class="hidden-cheese" style="right:6%;bottom:18px" aria-label="Hidden cheese"><svg><use href="#i-cheese"/></svg></button>
+</section>
+
+<!-- 03. LEGENDS -->
+<section class="band" id="legends">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Meet the legends</p>
+      <h2>Two Personalities. <em>Endless Trouble.</em></h2>
+      <p>Tap a card to flip it and see their secret stats.</p>
+    </div>
+    <div class="cards2">
+      <button class="flip tom reveal" aria-label="Flip Tom card">
+        <div class="flip-inner">
+          <div class="face front">
+            <div class="portrait slot" data-label="tom.png"><span>T</span>
+              <img class="slot-img" src="images/tom.png" alt="Tom" onerror="this.parentNode.classList.add('empty');this.remove()">
+            </div>
+            <div class="info">
+              <h3>Tom</h3>
+              <p class="tag">The Cat With A Plan!</p>
+              <p>Meet Tom, the ambitious cat with one big dream: to catch Jerry! He spends his days planning clever traps, setting up surprises and imagining his big victory. Unfortunately, things rarely go according to plan.</p>
+              <span class="flip-hint">Flip for stats →</span>
+            </div>
+          </div>
+          <div class="face back">
+            <h3>Tom's File</h3>
+            <ul class="stats">
+              <li><span>Biggest Strength</span><b>Determination</b></li>
+              <li><span>Biggest Weakness</span><b>Jerry!</b></li>
+              <li><span>Favourite Activity</span><b>Chasing</b></li>
+              <li><span>Biggest Dream</span><b>A Jerry-free house!</b></li>
+            </ul>
+            <div class="meter"><span>Success rate</span><div><i style="--w:6%"></i></div></div>
+            <span class="flip-hint">← Flip back</span>
+          </div>
+        </div>
+      </button>
+
+      <button class="flip jerry reveal" aria-label="Flip Jerry card">
+        <div class="flip-inner">
+          <div class="face front">
+            <div class="portrait slot" data-label="jerry.png"><span>J</span>
+              <img class="slot-img" src="images/jerry.png" alt="Jerry" onerror="this.parentNode.classList.add('empty');this.remove()">
+            </div>
+            <div class="info">
+              <h3>Jerry</h3>
+              <p class="tag">Small Mouse, Big Brain!</p>
+              <p>Don't let his tiny size fool you! Jerry is smart, quick and always three steps ahead. Whether it's stealing cheese or turning Tom's own tricks against him, Jerry knows exactly how to stay out of trouble.</p>
+              <span class="flip-hint">Flip for stats →</span>
+            </div>
+          </div>
+          <div class="face back">
+            <h3>Jerry's File</h3>
+            <ul class="stats">
+              <li><span>Biggest Strength</span><b>Intelligence</b></li>
+              <li><span>Biggest Weakness</span><b>Cheese!</b></li>
+              <li><span>Favourite Activity</span><b>Teasing Tom</b></li>
+              <li><span>Biggest Dream</span><b>Unlimited Cheese!</b></li>
+            </ul>
+            <div class="meter"><span>Escape rate</span><div><i style="--w:99%"></i></div></div>
+            <span class="flip-hint">← Flip back</span>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 04. HISTORY -->
+<section class="band history" id="history">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="eyebrow">Their legendary story</p>
+      <h2>It All Started <em>With A Mouse!</em></h2>
+      <p class="lead">Every legend has a beginning, and theirs started back in 1940.</p>
+      <p>Originally introduced in the animated short <i>Puss Gets the Boot</i>, Tom and Jerry quickly became one of the most loved cartoon duos in the world.</p>
+      <p>Created by William Hanna and Joseph Barbera, their adventures proved something magical: you don't need endless dialogue to make people laugh.</p>
+      <p>From their first chase to countless unforgettable moments, their story became a timeless part of childhood.</p>
+      <div class="big-count"><b>86</b><span>years of laughter, chaos and unforgettable memories!</span></div>
+    </div>
+    <div class="hist-right">
+    <div class="tv reveal">
+      <div class="tv-screen slot" data-label="history.jpg">
+        <img src="images/history.jpg" alt="A classic Tom and Jerry moment" onerror="this.parentNode.classList.add('empty');this.remove()">
+        <div class="scan"></div>
+        <span class="rec">● 1940</span>
+      </div>
+      <div class="tv-side"><i></i><i></i><b></b></div>
+    </div>
+    <ol class="timeline reveal">
+      <li><b>1940</b><p>The first chase: <i>Puss Gets the Boot</i> hits theatres.</p></li>
+      <li><b>Hanna &amp; Barbera</b><p>Two creators, one idea: comedy without words.</p></li>
+      <li><b>7 Oscars</b><p>The classic theatrical shorts win seven Academy Awards.</p></li>
+      <li><b>Today</b><p>Still chasing, still making new generations laugh.</p></li>
+    </ol>
+    </div>
+  </div>
+  <button class="hidden-cheese" style="left:4%;top:30px" aria-label="Hidden cheese"><svg><use href="#i-cheese"/></svg></button>
+</section>
+
+<!-- 05. ADVENTURES -->
+<section class="band" id="adventures">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">The never ending adventures</p>
+      <h2>Every Chase Has A <em>Different Story!</em></h2>
+      <p>Some days begin peacefully. But not in Tom and Jerry's house! Pick a story, place your bet, and see what happens.</p>
+    </div>
+    <div class="eps" id="eps"></div>
+  </div>
+</section>
+
+<!-- 06. DID YOU KNOW -->
+<section class="band facts" id="facts">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Did you know?</p>
+      <h2>Secrets Behind <em>The Laughter!</em></h2>
+      <p>Think you know everything about Tom and Jerry? Think again! Tap each card to reveal.</p>
+    </div>
+    <div class="fact-grid" id="factGrid"></div>
+    <p class="center ending reveal">And you thought you knew everything about them!</p>
+  </div>
+  <button class="hidden-cheese" style="right:5%;top:40px" aria-label="Hidden cheese"><svg><use href="#i-cheese"/></svg></button>
+</section>
+
+<!-- 07. FRIENDSHIP -->
+<section class="band friend wavy" id="friendship">
+  <div class="wrap narrow center reveal">
+    <p class="eyebrow">The unexpected friendship</p>
+    <h2>More Than <em>Just Enemies!</em></h2>
+    <p>They fight over food, compete for attention and turn the entire house upside down. But have you ever noticed what happens when one of them is in real trouble?</p>
+    <p class="pop">Suddenly, the rivalry disappears.</p>
+    <p>Tom and Jerry have shown us that even the biggest enemies can become the best teammates. Beneath all those tricks, pranks and endless chases lies a friendship that neither of them can walk away from.</p>
+    <div class="friends-pic slot" data-label="friends.png">
+      <img src="images/friends.png" alt="Tom and Jerry as friends" onerror="this.parentNode.classList.add('empty');this.remove()">
+    </div>
+    <div class="switch" id="relSwitch" role="group" aria-label="Their relationship">
+      <button type="button" class="on" data-rel="enemies" aria-pressed="true"><svg><use href="#i-bolt"/></svg>Enemies</button>
+      <button type="button" data-rel="team" aria-pressed="false"><svg><use href="#i-heart"/></svg>Teammates</button>
+      <i aria-hidden="true"></i>
+    </div>
+    <p class="rel-slogan" id="relSlogan" aria-live="polite">Cat vs. mouse, trap vs. trick… the whole house is a battlefield!</p>
+    <blockquote>"Sometimes the best friendships come disguised as the biggest rivalries."</blockquote>
+  </div>
+  <button class="hidden-cheese" style="left:6%;bottom:30px" aria-label="Hidden cheese"><svg><use href="#i-cheese"/></svg></button>
+</section>
+
+<!-- 08. QUIZ -->
+<section class="band" id="quiz">
+  <div class="wrap narrow">
+    <div class="center reveal">
+      <p class="eyebrow">Fun zone</p>
+      <h2>How Well Do You Know <em>Tom &amp; Jerry?</em></h2>
+      <p>Think you're their biggest fan? Let's find out!</p>
+    </div>
+    <div class="quiz reveal" id="quizBox"></div>
+  </div>
+</section>
+
+<!-- 09. FINAL -->
+<section class="band final wavy" id="final">
+  <div class="wrap narrow center reveal">
+    <figure class="polaroid">
+      <img src="images/chase.jpg" alt="Tom chasing Jerry past a mouse hole">
+      <figcaption>The chase that started it all…</figcaption>
+    </figure>
+    <h2>Some Chases <em>Never Get Old!</em></h2>
+    <p>Years may pass, cartoons may change, and new characters may arrive, but one thing will always remain special – the madness of Tom and Jerry!</p>
+    <p>From childhood giggles to grown-up nostalgia, they remind us that happiness can be found in the simplest things.</p>
+    <p class="lead">So, whose side are you on?</p>
+    <div class="teams">
+      <button class="team t-tom" data-team="tom"><span class="av"><b>T</b><img src="images/tom-face.png" alt="" onerror="this.remove()"></span>Team Tom</button>
+      <button class="team t-jerry" data-team="jerry"><span class="av"><b>J</b><img src="images/jerry-face.png" alt="" onerror="this.remove()"></span>Team Jerry</button>
+    </div>
+    <p class="team-msg" id="teamMsg" aria-live="polite"></p>
+    <p class="sign-off">The chase continues... and the next adventure is just around the corner!</p>
+    <a href="#top" class="btn btn-yellow">Chase it again ↑</a>
+  </div>
+  <button class="hidden-cheese" style="right:8%;bottom:40px" aria-label="Hidden cheese"><svg><use href="#i-cheese"/></svg></button>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p><b>Tom &amp; Jerry – The Never Ending Chase</b> · A fan-made tribute page.</p>
+  <p>Tom and Jerry and all related characters are trademarks of their respective owners.</p>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
